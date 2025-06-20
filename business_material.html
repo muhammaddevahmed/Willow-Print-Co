@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Willow Print Co</title>
+  <title>Business Materials | Willow Print Co</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="business_material.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&family=Dancing+Script:wght@600&display=swap"
     rel="stylesheet">
@@ -34,7 +34,7 @@
       <li><a href="shop.html">Shop</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="faqs.html">FAQ</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
       <li class="client-resource"><a href="client.html"><i class="fas fa-lock"></i> Client Resource</a></li>
     </ul>
 
@@ -50,103 +50,102 @@
       <li><a href="shop.html">Shop</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="faqs.html">FAQ</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
       <li class="client-resource"><a href="client.html"><i class="fas fa-lock"></i> Client Resource</a></li>
     </ul>
   </div>
-  <!-- NAVBAR END -->
+  <!-- NAVBAR START END -->
 
-  <section class="contact-section">
+  <section class="business-section">
     <!-- Decorative Elements -->
-    <div class="contact-watercolor"></div>
-    <div class="contact-flourish"></div>
+    <div class="business-watercolor"></div>
+    <div class="business-flourish"></div>
 
-    <div class="contact-container">
-      <!-- Contact Info -->
-      <div class="contact-info">
-        <div class="contact-header">
-          <h1>Get in Touch</h1>
-          <p>We'd love to hear from you! Whether you're planning a wedding, need business stationery, or want a custom
-            order, reach out and we'll create something beautiful together.</p>
-        </div>
-
-        <div class="contact-method">
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div class="contact-details">
-            <h3>Email Us</h3>
-            <a href="mailto:hello@willowprintco.com">hello@willowprintco.com</a>
-          </div>
-        </div>
-
-        <div class="contact-method">
-          <div class="contact-icon">
-            <i class="fas fa-phone-alt"></i>
-          </div>
-          <div class="contact-details">
-            <h3>Call Us</h3>
-            <a href="tel:+15551234567">(555) 123-4567</a>
-          </div>
-        </div>
-
-        <div class="contact-method">
-          <div class="contact-icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <div class="contact-details">
-            <h3>Visit Us</h3>
-            <p>123 Paper Lane, Studio City</p>
-          </div>
-        </div>
+    <div class="business-container">
+      <!-- Business Header -->
+      <div class="business-header">
+        <h1>Custom Business Materials</h1>
+        <p>Elevate your brand with our premium business materials, designed to make a lasting impression on your clients
+          and customers.</p>
       </div>
 
-      <!-- Contact Form -->
-      <form id="contactForm" class="contact-form">
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required maxlength="50">
-          <div class="error-message" id="nameError">Please enter a valid name (5-50 characters, letters, spaces, and
-            hyphens only)</div>
+      <!-- Products Grid - 2 wide cards at 80% width -->
+      <div class="products-grid">
+        <!-- Row 1 -->
+        <div class="product-row">
+          <!-- Business Branding Kits -->
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Business Branding Kits">
+              <div class="product-badge">Bestseller</div>
+            </div>
+            <div class="product-content">
+              <h3>Business Branding Kits</h3>
+              <div class="price">Starting at $149.99</div>
+              <p>Complete branding solution including business cards, letterheads, and envelopes with your custom
+                design. Perfect for establishing a cohesive brand identity.</p>
+              <div class="material-info">Premium matte finish with optional foil stamping</div>
+              <a href="contact.html" class="buy-now-btn">Buy Now</a>
+            </div>
+          </div>
+
+          <!-- Logo Stickers & Labels -->
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Logo Stickers & Labels">
+            </div>
+            <div class="product-content">
+              <h3>Logo Stickers & Labels</h3>
+              <div class="price">Starting at $29.99 per 100</div>
+              <p>High-quality stickers and labels featuring your logo, perfect for product packaging, shipping, or
+                promotional giveaways.</p>
+              <div class="material-info">Waterproof vinyl with matte or glossy finish</div>
+              <a href="contact.html" class="buy-now-btn">Buy Now</a>
+            </div>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required maxlength="100">
-          <div class="error-message" id="emailError">Please enter a valid email address</div>
+        <!-- Row 2 -->
+        <div class="product-row">
+          <!-- Business Thank You Cards -->
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1557200134-90327ee9fafa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Business Thank You Cards">
+              <div class="product-badge">Popular</div>
+            </div>
+            <div class="product-content">
+              <h3>Business Thank You Cards</h3>
+              <div class="price">Starting at $1.95 each</div>
+              <p>Elegant thank you cards to show appreciation to your clients, featuring your logo and custom message.
+              </p>
+              <div class="material-info">Luxury linen paper with matching envelopes</div>
+              <a href="contact.html" class="buy-now-btn">Buy Now</a>
+            </div>
+          </div>
+
+          <!-- Packaging Inserts -->
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1605007493699-af65834f8a00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Packaging Inserts">
+            </div>
+            <div class="product-content">
+              <h3>Packaging Inserts</h3>
+              <div class="price">Starting at $0.45 each</div>
+              <p>Custom printed inserts for your product packaging, perfect for promotions, care instructions, or brand
+                storytelling.</p>
+              <div class="material-info">Recycled kraft paper or premium white cardstock</div>
+              <a href="contact.html" class="buy-now-btn">Buy Now</a>
+            </div>
+          </div>
         </div>
-
-        <div class="form-group">
-          <label for="interest">I'm interested in</label>
-          <select id="interest" name="interest" required>
-            <option value="" disabled selected>Select an option</option>
-            <option value="weddings">Wedding Stationery</option>
-            <option value="business">Business Stationery</option>
-            <option value="custom">Custom Order</option>
-            <option value="other">Other Inquiry</option>
-          </select>
-          <div class="error-message" id="interestError">Please select an option</div>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" required maxlength="1000"></textarea>
-          <div class="error-message" id="messageError">Please enter a message (10-1000 characters)</div>
-        </div>
-
-        <button type="submit" class="submit-btn">
-          Send Message <i class="fas fa-paper-plane"></i>
-        </button>
-      </form>
-
-      <!-- Success Message (Hidden by Default) -->
-      <div id="successMessage" class="success-message">
-        <i class="fas fa-check-circle"></i>
-        <h3>Message Sent!</h3>
-        <p>Thank you for reaching out. We've received your message and will get back to you within 24-48 hours.</p>
-        <button class="submit-btn" onclick="resetForm()">
-          Send Another Message <i class="fas fa-undo"></i>
-        </button>
       </div>
     </div>
   </section>
@@ -181,7 +180,7 @@
           <li><a href="shop.html">Shop</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="faqs.html">FAQs</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li><a href="client.html" class="client-resource">Client Resources</a></li>
         </ul>
       </div>
@@ -220,8 +219,6 @@
   <!-- FOOTER END -->
 
   <script src="script.js"></script>
-  <script src="contact.js"></script>
-
 </body>
 
 </html>

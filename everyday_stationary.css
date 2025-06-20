@@ -1,0 +1,324 @@
+:root {
+  --warm-dark: #3a3226;
+  --gold: #c4a86f;
+  --dusty-rose: #d8b4a0;
+  --beige: #f5f0e6;
+  --text-light: #f8f8f8;
+}
+
+.everyday-section {
+  position: relative;
+  padding: 6rem 1.5rem;
+  background: var(--beige);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.everyday-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Everyday Header */
+.everyday-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards 0.3s;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.everyday-header h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--warm-dark);
+  margin-bottom: 1.5rem;
+  font-family: "Dancing Script", cursive;
+  line-height: 1.2;
+}
+
+.everyday-header p {
+  color: var(--warm-dark);
+  opacity: 0.8;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Products Grid - 3 wide cards */
+.products-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 110%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  max-width: 580px;
+}
+
+.product-card:nth-child(1) {
+  animation: fadeInUp 0.8s ease forwards 0.4s;
+}
+.product-card:nth-child(2) {
+  animation: fadeInUp 0.8s ease forwards 0.6s;
+}
+.product-card:nth-child(3) {
+  animation: fadeInUp 0.8s ease forwards 0.8s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.product-image {
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--gold);
+  color: var(--warm-dark);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.product-content {
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-content h3 {
+  color: var(--warm-dark);
+  font-size: 1.7rem;
+  margin-bottom: 0.75rem;
+  font-family: "Playfair Display", serif;
+}
+
+.product-content .price {
+  color: var(--gold);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.product-content p {
+  color: var(--warm-dark);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+  flex-grow: 1;
+}
+
+/* Material Info */
+.material-info {
+  font-style: italic;
+  color: var(--warm-dark);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* Buy Now Button */
+.buy-now-btn {
+  display: block;
+  width: 85%;
+  background: var(--warm-dark);
+  color: var(--beige);
+  padding: 1.1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin-top: auto;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+}
+
+.buy-now-btn:hover {
+  background: var(--gold);
+  color: var(--warm-dark);
+}
+
+/* Decorative Elements */
+.everyday-watercolor {
+  position: absolute;
+  top: 50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path fill="%23d8b4a0" opacity="0.08" d="M45,5c25,15,40,50,60,80s45,65,70,70s45-30,20-80S90,10,45,5z"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+  animation: float 12s ease-in-out infinite;
+}
+
+.everyday-flourish {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 250px;
+  height: 250px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path fill="%23c4a86f" opacity="0.1" d="M30,30c10,5,25-5,40,15s35,45,60,30s35-40,15-60S60,10,30,30z"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(10px, 10px) rotate(2deg);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .product-card {
+    width: 30%;
+  }
+}
+
+@media (max-width: 992px) {
+  .product-card {
+    width: 45%;
+  }
+
+  .product-card:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .everyday-section {
+    padding: 4rem 1rem;
+  }
+
+  .everyday-header {
+    width: 100%;
+  }
+
+  .products-grid {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .product-card {
+    width: 80%;
+    max-width: 100%;
+  }
+
+  .product-card:nth-child(3) {
+    display: flex;
+  }
+
+  .everyday-header h1 {
+    font-size: 3rem;
+  }
+
+  .everyday-watercolor,
+  .everyday-flourish {
+    width: 200px;
+    height: 200px;
+  }
+
+  .product-image {
+    height: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .everyday-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .everyday-header p {
+    font-size: 1rem;
+  }
+
+  .product-card {
+    width: 90%;
+  }
+
+  .product-content {
+    padding: 1.5rem;
+  }
+}
+
+/* Motion Sensitivity Preference */
+@media (prefers-reduced-motion) {
+  .everyday-header,
+  .product-card {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+
+  .product-card:hover {
+    transform: none;
+  }
+
+  .product-image img {
+    transition: none;
+  }
+
+  .everyday-watercolor,
+  .everyday-flourish {
+    animation: none;
+  }
+}
