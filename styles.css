@@ -5,11 +5,18 @@
   --gold: #d4af37;
   --cream: #f5f5f0;
   --text-light: #ffffff;
+  --charcoal: #2d2424;
+  --beige: #f5f5f0;
+  --espresso: #3a3226;
+  --dusty-rose: #d8b4a0;
+  --serif: "Playfair Display", serif;
+  --sans-serif: "Montserrat", sans-serif;
+  --script: "Dancing Script", cursive;
 }
 
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--sans-serif);
   background: var(--dark);
   color: var(--text-light);
 }
@@ -21,7 +28,6 @@ body {
   align-items: center;
   padding: 1.5rem 5%;
   background: rgba(26, 26, 26, 0.95);
-
   width: 90%;
   top: 0;
   z-index: 1000;
@@ -41,11 +47,24 @@ body {
 }
 
 .brand-name {
-  font-family: "Playfair Display", serif;
+  font-family: var(--serif);
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--cream);
   letter-spacing: 1px;
+}
+
+/* New rule for brand-name link in navbar */
+.nav-brand a.brand-name {
+  color: var(--cream);
+  text-decoration: none;
+}
+
+.nav-brand a.brand-name:hover,
+.nav-brand a.brand-name:active,
+.nav-brand a.brand-name:focus {
+  color: var(--cream);
+  text-decoration: none;
 }
 
 /* Navigation Links */
@@ -154,10 +173,9 @@ body {
   }
 }
 
-/* ======= NAVBAR END ======= */
+/* ===== NAVBAR END ===== */
 
-/* ======= HERO SECTION START ======= */
-
+/* ===== HERO SECTION START ===== */
 .hero {
   background: var(--charcoal);
   position: relative;
@@ -195,8 +213,7 @@ body {
 .handmade-frame {
   position: relative;
   width: 100%;
-  height: 100%;
-  min-height: 500px;
+  aspect-ratio: 4 / 3; /* Set a consistent aspect ratio for the frame */
   border: 15px solid transparent;
   padding: 5px;
   background-clip: padding-box;
@@ -211,6 +228,7 @@ body {
   background-size: 200% 200%;
   animation: gradientBorder 8s ease infinite;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden; /* Prevent image overflow */
 }
 
 .carousel-slide {
@@ -224,7 +242,8 @@ body {
 .carousel-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Changed from cover to contain */
+  object-position: center;
   display: block;
 }
 
@@ -328,7 +347,7 @@ body {
   position: absolute;
   width: 80px;
   height: 80px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23c4a86f" d="M100,0 L100,40 C60,40 40,60 40,100 L0,100 L0,0 Z"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23d4af37" d="M100,0 L100,40 C60,40 40,60 40,100 L0,100 L0,0 Z"/></svg>');
   background-size: contain;
   opacity: 0.7;
   z-index: 2;
@@ -363,7 +382,6 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  min-height: inherit;
 }
 
 .carousel-slide {
@@ -381,7 +399,7 @@ body {
 .carousel-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   display: block;
 }
@@ -479,7 +497,7 @@ body {
   }
 
   .handmade-frame {
-    min-height: 450px;
+    aspect-ratio: 4 / 3;
   }
 }
 
@@ -510,8 +528,9 @@ body {
   }
 
   .handmade-frame {
-    min-height: 400px;
     margin-top: 40px;
+    aspect-ratio: 4 / 3;
+    max-height: 400px;
   }
 }
 
@@ -536,7 +555,8 @@ body {
   }
 
   .handmade-frame {
-    min-height: 350px;
+    aspect-ratio: 4 / 3;
+    max-height: 350px;
   }
   #scroll-hint {
     margin-bottom: 20px;
@@ -554,7 +574,8 @@ body {
 
   .handmade-frame {
     border-width: 10px;
-    min-height: 300px;
+    aspect-ratio: 4 / 3;
+    max-height: 300px;
   }
 
   .corner-ornament {
@@ -580,10 +601,9 @@ body {
   }
 }
 
-/* ======= HERO SECTION END ======= */
+/* ===== HERO SECTION END ===== */
 
 /* ==== FEATURED PRODUCTS SECTION ==== */
-
 .featured-products {
   padding: 6rem 1.5rem;
   background: var(--warm-dark);
@@ -775,7 +795,6 @@ body {
 /* ==== FEATURED PRODUCTS SECTION END ==== */
 
 /* ===== UNIQUE SECTION START ===== */
-
 .uniqueness-section {
   position: relative;
   padding: 6rem 1rem;
@@ -987,8 +1006,9 @@ body {
   }
 }
 
-/* ===== FOOTER START ===== */
+/* ===== UNIQUE SECTION END ===== */
 
+/* ===== FOOTER START ===== */
 .luxury-footer {
   position: relative;
   background: var(--charcoal);
@@ -1042,6 +1062,19 @@ body {
   font-weight: 700;
   color: var(--beige);
   letter-spacing: 0.5px;
+}
+
+/* New rule for brand-name link in footer */
+.footer-brand a.brand-name {
+  color: var(--beige);
+  text-decoration: none;
+}
+
+.footer-brand a.brand-name:hover,
+.footer-brand a.brand-name:active,
+.footer-brand a.brand-name:focus {
+  color: var(--beige);
+  text-decoration: none;
 }
 
 .brand-tagline {
@@ -1364,4 +1397,4 @@ body {
   }
 }
 
-/* ===== FOOTER START ===== */
+/* ===== FOOTER END ===== */

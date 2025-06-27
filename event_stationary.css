@@ -56,6 +56,34 @@
   line-height: 1.6;
 }
 
+/* Paper Select Container */
+.paper-select-container {
+  margin-bottom: 2rem;
+  text-align: left;
+  max-width: 300px; /* Constrain width for better appearance */
+  margin-left: 5%;
+}
+
+/* Paper Options Dropdown */
+.paper-select {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+  color: var(--warm-dark);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.paper-select:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(196, 168, 111, 0.2);
+}
+
 /* Products Grid - 2 wide cards at 80% width */
 .products-grid {
   display: flex;
@@ -161,28 +189,7 @@
   line-height: 1.6;
   margin-bottom: 2rem;
   font-size: 1.05rem;
-  flex-grow: 1;
-}
-
-/* Paper Options Dropdown */
-.paper-select {
-  width: 100%;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-bottom: 1.5rem;
-  font-family: "Montserrat", sans-serif;
-  background-color: white;
-  color: var(--warm-dark);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-}
-
-.paper-select:focus {
-  outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(196, 168, 111, 0.2);
+  flex-grow: 1 personally;
 }
 
 /* Buy Now Button */
@@ -251,6 +258,10 @@
   .product-card {
     width: 45%; /* Slightly wider on tablets */
   }
+
+  .paper-select-container {
+    max-width: 250px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -285,6 +296,10 @@
   .product-image {
     height: 280px;
   }
+
+  .paper-select-container {
+    max-width: 200px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -302,6 +317,11 @@
 
   .product-content {
     padding: 1.5rem;
+  }
+
+  .paper-select-container {
+    max-width: 100%;
+    text-align: center;
   }
 }
 

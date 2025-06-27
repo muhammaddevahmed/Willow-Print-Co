@@ -54,6 +54,33 @@
   line-height: 1.6;
 }
 
+/* Paper Select Container */
+.paper-select-container {
+  margin-bottom: 2rem;
+  text-align: left;
+  max-width: 300px; /* Constrain width for better appearance */
+}
+
+/* Paper Options Dropdown */
+.paper-select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+  color: var(--warm-dark);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.paper-select:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(196, 168, 111, 0.2);
+}
+
 /* Products Grid */
 .products-grid {
   display: grid;
@@ -158,26 +185,6 @@
   flex-grow: 1;
 }
 
-/* Paper Options Dropdown */
-.paper-select {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-  font-family: "Montserrat", sans-serif;
-  background-color: white;
-  color: var(--warm-dark);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.paper-select:focus {
-  outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(196, 168, 111, 0.2);
-}
-
 /* Buy Now Button */
 .buy-now-btn {
   display: block;
@@ -242,6 +249,10 @@
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .paper-select-container {
+    max-width: 250px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -258,6 +269,10 @@
     width: 200px;
     height: 200px;
   }
+
+  .paper-select-container {
+    max-width: 200px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -271,6 +286,11 @@
 
   .wedding-header p {
     font-size: 1rem;
+  }
+
+  .paper-select-container {
+    max-width: 100%;
+    text-align: center;
   }
 }
 
