@@ -88,73 +88,141 @@
   font-family: "Montserrat", sans-serif;
 }
 
+/* Enhanced Image Section */
 .unique-about-image {
   flex: 0 1 45%;
   position: relative;
+  perspective: 1000px;
 }
 
-.unique-frame {
+.unique-image-container {
   position: relative;
   width: 100%;
   height: 100%;
-  aspect-ratio: 4 / 3; /* Consistent aspect ratio for better image fit */
-  border: 10px solid transparent;
-  background-clip: padding-box;
-  background-image: linear-gradient(var(--warm-dark), var(--warm-dark)),
-    linear-gradient(
-      135deg,
-      var(--gold) 0%,
-      var(--dusty-rose) 50%,
-      var(--gold) 100%
-    );
-  background-origin: border-box;
-  background-size: 200% 200%;
-  animation: unique-about-gradientBorder 8s ease infinite;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  overflow: hidden; /* Prevent image overflow */
+  transform-style: preserve-3d;
 }
 
-.unique-frame img {
+.unique-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 125%; /* Adjust based on your image aspect ratio */
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: translateZ(20px);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.unique-image-wrapper:hover {
+  transform: translateZ(30px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.unique-main-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Ensure full image visibility */
+  object-fit: cover;
   object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.unique-image-wrapper:hover .unique-main-image {
+  transform: scale(1.03);
+}
+
+.unique-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(196, 168, 111, 0.2) 0%, rgba(196, 168, 111, 0.05) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.unique-image-wrapper:hover .unique-image-overlay {
+  opacity: 1;
+}
+
+.unique-overlay-content {
+  text-align: center;
+  color: white;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.unique-image-wrapper:hover .unique-overlay-content {
+  transform: translateY(0);
+}
+
+.overlay-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--gold);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.overlay-text {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.unique-image-shadow {
+  position: absolute;
+  bottom: -15px;
+  left: 5%;
+  width: 90%;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.2);
+  filter: blur(15px);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.unique-corner-decoration {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+  opacity: 0.8;
+}
+
+.unique-corner-decoration.top-left {
+  top: -10px;
+  left: -10px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23c4a86f" d="M100,0 L100,40 C60,40 40,60 40,100 L0,100 L0,0 Z"/></svg>');
+}
+
+.unique-corner-decoration.bottom-right {
+  bottom: -10px;
+  right: -10px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23c4a86f" d="M0,100 L0,60 C40,60 60,40 60,0 L100,0 L100,100 Z"/></svg>');
 }
 
 .unique-image-caption {
   position: absolute;
-  bottom: -20px;
-  right: 0;
+  bottom: -25px;
+  right: 20px;
   background: var(--espresso);
   padding: 0.5rem 1.5rem;
   font-size: 1.1rem;
   color: var(--gold);
   font-family: "Dancing Script", cursive;
   z-index: 3;
-}
-
-.unique-corner-ornament {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23c4a86f" d="M100,0 L100,40 C60,40 40,60 40,100 L0,100 L0,0 Z"/></svg>');
-  background-size: contain;
-  opacity: 0.7;
-  z-index: 2;
-}
-
-.unique-top-left {
-  top: 15px;
-  left: 15px;
-}
-
-.unique-bottom-right {
-  bottom: 15px;
-  right: 15px;
-  transform: rotate(180deg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Values Section */
@@ -312,18 +380,6 @@
   }
 }
 
-@keyframes unique-about-gradientBorder {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 /* Responsive Adjustments */
 @media (max-width: 992px) {
   .unique-about-content {
@@ -345,9 +401,8 @@
     transform: translateX(-50%);
   }
 
-  .unique-frame {
-    aspect-ratio: 4 / 3; /* Maintain consistent aspect ratio */
-    max-height: 400px; /* Limit height for smaller screens */
+  .unique-image-wrapper {
+    padding-bottom: 75%; /* Adjust aspect ratio for tablet */
   }
 }
 
@@ -375,9 +430,8 @@
     height: 200px;
   }
 
-  .unique-frame {
-    aspect-ratio: 4 / 3;
-    max-height: 350px; /* Adjusted for smaller screens */
+  .unique-image-wrapper {
+    padding-bottom: 100%; /* Adjust aspect ratio for mobile */
   }
 }
 
@@ -395,20 +449,14 @@
     font-size: 0.95rem;
   }
 
-  unique-btn {
+  .unique-btn {
     width: 85%;
     justify-content: center;
   }
 
-  .unique-frame {
-    border-width: 8px;
-    aspect-ratio: 4 / 3;
-    max-height: 300px; /* Further reduced for very small screens */
-  }
-
-  .unique-corner-ornament {
-    width: 40px;
-    height: 40px;
+  .unique-corner-decoration {
+    width: 30px;
+    height: 30px;
   }
 
   .unique-about-watercolor,
@@ -435,18 +483,29 @@
   .unique-about-text p {
     font-size: 1.1rem;
   }
-
-  .unique-frame {
-    aspect-ratio: 4 / 3;
-  }
 }
 
 /* Motion Sensitivity Preference */
 @media (prefers-reduced-motion) {
-  .unique-frame {
-    animation: none;
-    background: var(--warm-dark);
-    border: 1px solid var(--gold);
+  .unique-image-wrapper {
+    transform: none !important;
+    transition: none;
+  }
+
+  .unique-image-wrapper:hover {
+    transform: none !important;
+  }
+
+  .unique-main-image {
+    transition: none;
+  }
+
+  .unique-image-overlay {
+    transition: none;
+  }
+
+  .unique-overlay-content {
+    transition: none;
   }
 
   .unique-about-watercolor,

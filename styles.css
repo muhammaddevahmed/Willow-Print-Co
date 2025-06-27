@@ -1194,7 +1194,7 @@ body {
 .copyright {
   color: var(--text-light);
   opacity: 0.6;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   order: 2;
 }
 
@@ -1203,12 +1203,13 @@ body {
   align-items: center;
   gap: 0.8rem;
   order: 1;
+  margin-right: 2%;
 }
 
 .legal-links a {
   color: var(--text-light);
   opacity: 0.6;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   text-decoration: none;
   transition: all 0.3s ease;
 }
