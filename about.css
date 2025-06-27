@@ -298,6 +298,8 @@
   transform: translateY(20px);
   opacity: 0;
   animation: unique-about-fadeInUp 0.8s ease forwards 0.9s;
+  width: 90%;
+  margin-right: 7%;
 }
 
 .unique-about-cta p {
