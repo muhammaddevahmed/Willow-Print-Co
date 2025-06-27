@@ -54,16 +54,16 @@ body {
   letter-spacing: 1px;
 }
 
-/* New rule for brand-name link in navbar */
+/* Rule for brand-name link in navbar */
 .nav-brand a.brand-name {
-  color: var(--cream);
+  color: var(--black);
   text-decoration: none;
 }
 
 .nav-brand a.brand-name:hover,
 .nav-brand a.brand-name:active,
 .nav-brand a.brand-name:focus {
-  color: var(--cream);
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -170,6 +170,11 @@ body {
 
   .mobile-menu.active {
     display: block;
+  }
+
+  /* Ensure no underline on brand name for smaller screens */
+  .nav-brand a.brand-name {
+    text-decoration: none;
   }
 }
 
@@ -501,7 +506,7 @@ body {
   }
 }
 
-@media (max-width: 992px) {
+@media (最大宽度：992px) {
   .hero-container {
     flex-direction: column;
   }
@@ -1064,7 +1069,7 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* New rule for brand-name link in footer */
+/* Rule for brand-name link in footer */
 .footer-brand a.brand-name {
   color: var(--beige);
   text-decoration: none;
@@ -1310,6 +1315,11 @@ body {
   .brand-tagline {
     font-size: 0.9rem;
   }
+
+  /* Ensure no underline on brand name for smaller screens */
+  .footer-brand a.brand-name {
+    text-decoration: none;
+  }
 }
 
 /* Extra small screens (below 480px) */
@@ -1356,6 +1366,11 @@ body {
   .copyright,
   .legal-links a {
     font-size: 0.75rem;
+  }
+
+  /* Ensure no underline on brand name for extra small screens */
+  .footer-brand a.brand-name {
+    text-decoration: none;
   }
 }
 
