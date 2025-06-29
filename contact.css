@@ -197,9 +197,7 @@
 .form-group input,
 .form-group textarea,
 .form-group select {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 95%; /* Ensure all input fields have the same width */
   display: block;
   padding: 0.8rem 1rem;
   border: 1px solid #ddd;
@@ -544,5 +542,3 @@
 .terms-modal-body::-webkit-scrollbar-thumb:hover {
   background: var(--dusty-rose);
 }
-
-
