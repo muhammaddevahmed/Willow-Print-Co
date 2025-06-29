@@ -189,10 +189,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1400px;
+  max-width: 1600px; /* Increased max-width for better image display */
   margin: 0 auto;
   width: 100%;
   gap: 60px;
+  min-height: 80vh; /* Ensure container height accommodates image */
 }
 
 .hero-content {
@@ -345,27 +346,6 @@ body {
 }
 
 /* Decorative Elements */
-.corner-ornament {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23d4af37" d="M100,0 L100,40 C60,40 40,60 40,100 L0,100 L0,0 Z"/></svg>');
-  background-size: contain;
-  opacity: 0.7;
-  z-index: 2;
-}
-
-.top-left {
-  top: 20px;
-  left: 20px;
-}
-
-.bottom-right {
-  bottom: 20px;
-  right: 20px;
-  transform: rotate(180deg);
-}
-
 .slide-caption {
   position: absolute;
   bottom: -25px;
@@ -499,6 +479,7 @@ body {
 @media (max-width: 1200px) {
   .hero-container {
     gap: 40px;
+    max-width: 1000px; /* Adjusted for better image display */
   }
 
   .handmade-frame {
@@ -509,6 +490,7 @@ body {
 @media (max-width: 992px) {
   .hero-container {
     flex-direction: column;
+    max-width: 800px; /* Adjusted for better image display */
   }
 
   .hero-content,
@@ -537,12 +519,15 @@ body {
     aspect-ratio: 4 / 3;
     max-height: 350px; /* Adjusted for better size on smaller screens */
   }
-  
 }
 
 @media (max-width: 768px) {
   .hero {
     padding: 100px 5% 60px;
+  }
+
+  .hero-container {
+    max-width: 600px; /* Adjusted for better image display */
   }
 
   .hero-title {
@@ -572,6 +557,10 @@ body {
 }
 
 @media (max-width: 576px) {
+  .hero-container {
+    max-width: 90%; /* Adjusted for better image display */
+  }
+
   .hero-title {
     font-size: 2.2rem;
   }
@@ -584,11 +573,6 @@ body {
     border-width: 10px;
     aspect-ratio: 4 / 3;
     max-height: 250px; /* Adjusted for better size on smaller screens */
-  }
-
-  .corner-ornament {
-    width: 60px;
-    height: 60px;
   }
 
   .btn {
@@ -781,6 +765,8 @@ body {
     width: 85%;
     justify-content: center;
   }
+
+ 
 }
 
 /* Touch device adjustments */
