@@ -54,269 +54,6 @@
   line-height: 1.6;
 }
 
-/* Paper Select Container */
-.paper-select-container {
-  margin-bottom: 2rem;
-  text-align: left;
-  max-width: 300px; /* Constrain width for better appearance */
-}
-
-/* Paper Options Dropdown */
-.paper-select {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-family: "Montserrat", sans-serif;
-  background-color: white;
-  color: var(--warm-dark);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-}
-
-.paper-select:focus {
-  outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(196, 168, 111, 0.2);
-}
-
-/* Products Grid */
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
-  width: 97%;
-}
-
-.product-card {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: all 0.4s ease;
-  opacity: 0;
-  transform: translateY(20px);
-  display: flex;
-  flex-direction: column;
-}
-
-.product-card:nth-child(1) {
-  animation: fadeInUp 0.8s ease forwards 0.4s;
-}
-.product-card:nth-child(2) {
-  animation: fadeInUp 0.8s ease forwards 0.6s;
-}
-.product-card:nth-child(3) {
-  animation: fadeInUp 0.8s ease forwards 0.8s;
-}
-.product-card:nth-child(4) {
-  animation: fadeInUp 0.8s ease forwards 1s;
-}
-.product-card:nth-child(5) {
-  animation: fadeInUp 0.8s ease forwards 1.2s;
-}
-.product-card:nth-child(6) {
-  animation: fadeInUp 0.8s ease forwards 1.4s;
-}
-
-.product-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-}
-
-.product-image {
-  height: 400px;
-  overflow: hidden;
-  position: relative;
-}
-
-.product-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: transform 0.6s ease;
-}
-
-.product-card:hover .product-image img {
-  transform: scale(1.05);
-}
-
-.product-badge {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: var(--gold);
-  color: var(--warm-dark);
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.product-content {
-  padding: 1.5rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.product-content h3 {
-  color: var(--warm-dark);
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  font-family: "Playfair Display", serif;
-}
-
-.product-content .price {
-  color: var(--gold);
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.product-content p {
-  color: var(--warm-dark);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-  flex-grow: 1;
-}
-
-/* Buy Now Button */
-.buy-now-btn {
-  display: block;
-  width: 90%;
-  background: var(--warm-dark);
-  color: var(--beige);
-  padding: 0.8rem;
-  border-radius: 4px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  margin-top: auto;
-}
-
-.buy-now-btn:hover {
-  background: var(--gold);
-  color: var(--warm-dark);
-}
-
-/* Decorative Elements */
-.wedding-watercolor {
-  position: absolute;
-  top: 50px;
-  right: -50px;
-  width: 300px;
-  height: 300px;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path fill="%23d8b4a0" opacity="0.08" d="M45,5c25,15,40,50,60,80s45,65,70,70s45-30,20-80S90,10,45,5z"/></svg>');
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: 1;
-  animation: float 12s ease-in-out infinite;
-}
-
-.wedding-flourish {
-  position: absolute;
-  bottom: -50px;
-  left: -50px;
-  width: 250px;
-  height: 250px;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path fill="%23c4a86f" opacity="0.1" d="M30,30c10,5,25-5,40,15s35,45,60,30s35-40,15-60S60,10,30,30z"/></svg>');
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: 1;
-  animation: float 8s ease-in-out infinite reverse;
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  50% {
-    transform: translate(10px, 10px) rotate(2deg);
-  }
-}
-
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-  .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .paper-select-container {
-    max-width: 250px;
-  }
-}
-
-@media (max-width: 768px) {
-  .wedding-section {
-    padding: 4rem 1rem;
-  }
-
-  .wedding-header h1 {
-    font-size: 3rem;
-  }
-
-  .wedding-watercolor,
-  .wedding-flourish {
-    width: 200px;
-    height: 200px;
-  }
-
-  .paper-select-container {
-    max-width: 200px;
-  }
-}
-
-@media (max-width: 576px) {
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .wedding-header h1 {
-    font-size: 2.5rem;
-  }
-
-  .wedding-header p {
-    font-size: 1rem;
-  }
-
-  .paper-select-container {
-    max-width: 100%;
-    text-align: center;
-  }
-}
-
-/* Motion Sensitivity Preference */
-@media (prefers-reduced-motion) {
-  .wedding-header,
-  .product-card {
-    animation: none !important;
-    opacity: 1;
-    transform: none;
-  }
-
-  .product-card:hover {
-    transform: none;
-  }
-
-  .product-image img {
-    transition: none;
-  }
-
-  .wedding-watercolor,
-  .wedding-flourish {
-    animation: none;
-  }
-}
-
 /* Bundle Container Styles */
 .bundle-container {
   position: relative;
@@ -492,8 +229,175 @@
   border-color: var(--gold);
 }
 
-/* Responsive Styles */
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 97%;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:nth-child(1) {
+  animation: fadeInUp 0.8s ease forwards 0.4s;
+}
+.product-card:nth-child(2) {
+  animation: fadeInUp 0.8s ease forwards 0.6s;
+}
+.product-card:nth-child(3) {
+  animation: fadeInUp 0.8s ease forwards 0.8s;
+}
+.product-card:nth-child(4) {
+  animation: fadeInUp 0.8s ease forwards 1s;
+}
+.product-card:nth-child(5) {
+  animation: fadeInUp 0.8s ease forwards 1.2s;
+}
+.product-card:nth-child(6) {
+  animation: fadeInUp 0.8s ease forwards 1.4s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.product-image {
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--gold);
+  color: var(--warm-dark);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.product-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-content h3 {
+  color: var(--warm-dark);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: "Playfair Display", serif;
+}
+
+.product-content .price {
+  color: var(--gold);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.product-content p {
+  color: var(--warm-dark);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  flex-grow: 1;
+}
+
+/* Buy Now Button */
+.buy-now-btn {
+  display: block;
+  width: 90%;
+  background: var(--warm-dark);
+  color: var(--beige);
+  padding: 0.8rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin-top: auto;
+}
+
+.buy-now-btn:hover {
+  background: var(--gold);
+  color: var(--warm-dark);
+}
+
+/* Decorative Elements */
+.wedding-watercolor {
+  position: absolute;
+  top: 50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path fill="%23d8b4a0" opacity="0.08" d="M45,5c25,15,40,50,60,80s45,65,70,70s45-30,20-80S90,10,45,5z"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+  animation: float 12s ease-in-out infinite;
+}
+
+.wedding-flourish {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 250px;
+  height: 250px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path fill="%23c4a86f" opacity="0.1" d="M30,30c10,5,25-5,40,15s35,45,60,30s35-40,15-60S60,10,30,30z"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(10px, 10px) rotate(2deg);
+  }
+}
+
+/* Responsive Adjustments */
 @media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .bundle-grid {
     flex-direction: column;
   }
@@ -505,9 +409,21 @@
   .bundle-items {
     grid-template-columns: 1fr;
   }
+
+  .paper-select-container {
+    max-width: 250px;
+  }
 }
 
 @media (max-width: 768px) {
+  .wedding-section {
+    padding: 4rem 1rem;
+  }
+
+  .wedding-header h1 {
+    font-size: 3rem;
+  }
+
   .bundle-header {
     flex-direction: column;
     align-items: flex-start;
@@ -529,9 +445,31 @@
   .bundle-right h3 {
     font-size: 1.5rem;
   }
+
+  .wedding-watercolor,
+  .wedding-flourish {
+    width: 200px;
+    height: 200px;
+  }
+
+  .paper-select-container {
+    max-width: 200px;
+  }
 }
 
 @media (max-width: 576px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .product-card {
+    /* margin: 0 auto; */
+    max-width: calc(100% );
+  }
+
   .bundle-header {
     padding: 1rem;
   }
@@ -551,5 +489,44 @@
   .bundle-cta {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
+    width: 95%;
+  }
+
+  .wedding-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .wedding-header p {
+    font-size: 1rem;
+  }
+
+  .paper-select-container {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+/* Motion Sensitivity Preference */
+@media (prefers-reduced-motion) {
+  .wedding-header,
+  .product-card,
+  .bundle-container {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+
+  .product-card:hover {
+    transform: none;
+  }
+
+  .product-image img,
+  .bundle-image img {
+    transition: none;
+  }
+
+  .wedding-watercolor,
+  .wedding-flourish {
+    animation: none;
   }
 }
