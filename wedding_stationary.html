@@ -70,64 +70,67 @@
           to reflect your unique love story.</p>
       </div>
 
-     <!-- Add this right after the wedding-header div -->
-<div class="bundle-dropdown">
-  <button class="bundle-dropbtn">
-    <span class="bundle-title">Bridal Suite Bundle <i class="fas fa-chevron-down"></i></span>
-    <span class="bundle-badge">Most Popular</span>
-    <span class="bundle-price">Starting at $485 <span class="bundle-save">(Save 15%)</span></span>
-  </button>
-  <div class="bundle-dropdown-content">
-    <div class="bundle-grid">
-      <div class="bundle-left">
-        <div class="bundle-image">
-          <img src="images/Shop images/Wedding stationary/bridal-bundle.png" alt="Bridal Suite Bundle">
+
+
+      <div class="bundle-container">
+        <div class="bundle-header">
+          <span class="bundle-title">Bridal Suite Bundle</span>
+          <span class="bundle-badge">Most Popular</span>
+          <span class="bundle-price">Starting at $485 <span class="bundle-save">(Save 15%)</span></span>
         </div>
-      </div>
-      <div class="bundle-right">
-        <h3>Complete Wedding Stationery Collection</h3>
-        <p class="bundle-description">Everything you need for a cohesive wedding stationery suite, from save-the-dates to thank you cards.</p>
-        
-        <div class="bundle-includes">
-          <h4>Bundle Includes:</h4>
-          <div class="bundle-items">
-            <div class="bundle-item">
-              <i class="fas fa-check-circle"></i>
-              <span>150 Save the Dates</span>
+
+        <div class="bundle-content">
+          <div class="bundle-grid">
+            <div class="bundle-left">
+              <div class="bundle-image">
+                <img src="images/Shop images/shop wedding stationery.png" alt="Bridal Suite Bundle">
+              </div>
             </div>
-            <div class="bundle-item">
-              <i class="fas fa-check-circle"></i>
-              <span>150 Invitations</span>
-            </div>
-            <div class="bundle-item">
-              <i class="fas fa-check-circle"></i>
-              <span>150 RSVP Cards</span>
-            </div>
-            <div class="bundle-item">
-              <i class="fas fa-check-circle"></i>
-              <span>150 Thank You Cards</span>
-            </div>
-            <div class="bundle-item">
-              <i class="fas fa-check-circle"></i>
-              <span>All envelopes included</span>
-            </div>
-            <div class="bundle-item">
-              <i class="fas fa-plus-circle"></i>
-              <span>Custom add-ons available</span>
+            <div class="bundle-right">
+              <h3>Complete Wedding Stationery Collection</h3>
+              <p class="bundle-description">Everything you need for a cohesive wedding stationery suite, from
+                save-the-dates to thank you cards.</p>
+
+              <div class="bundle-includes">
+                <h4>Bundle Includes:</h4>
+                <div class="bundle-items">
+                  <div class="bundle-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>150 Save the Dates</span>
+                  </div>
+                  <div class="bundle-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>150 Invitations</span>
+                  </div>
+                  <div class="bundle-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>150 RSVP Cards</span>
+                  </div>
+                  <div class="bundle-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>150 Thank You Cards</span>
+                  </div>
+                  <div class="bundle-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>All envelopes included</span>
+                  </div>
+                  <div class="bundle-item">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Custom add-ons available</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bundle-value">
+                <i class="fas fa-star"></i>
+                <span>Perfect for 100-125 guests</span>
+              </div>
+
+              <a href="contact.html" class="bundle-cta">Customize Your Bundle</a>
             </div>
           </div>
         </div>
-        
-        <div class="bundle-value">
-          <i class="fas fa-star"></i>
-          <span>Perfect for 100-125 guests</span>
-        </div>
-        
-        <a href="contact.html" class="bundle-cta">Customize Your Bundle</a>
       </div>
-    </div>
-  </div>
-</div>
 
       <!-- Products Grid -->
       <div class="products-grid">
@@ -221,7 +224,7 @@
     </div>
   </section>
 
-    
+
   <!-- FOOTER START -->
   <footer class="luxury-footer">
     <div class="footer-border"></div>
@@ -268,7 +271,7 @@
         <i class="fas fa-phone-alt"></i>
         <span>(513) 549-1791</span>
       </div>
-      
+
     </div>
     </div>
     <div class="footer-bottom">
@@ -276,8 +279,8 @@
         © 2025 Willow Print Co. All rights reserved.
       </div>
       <div class="legal-links">
-        
-       
+
+
         <a href="terms_condition.html">Terms of Service</a>
       </div>
     </div>
@@ -289,19 +292,20 @@
   <script src="script.js"></script>
   <script>
     // Bundle Dropdown Toggle
-document.querySelector('.bundle-dropbtn').addEventListener('click', function() {
-  this.parentElement.classList.toggle('active');
-});
+    document.querySelector('.bundle-dropbtn').addEventListener('click', function () {
+      this.parentElement.classList.toggle('active');
+    });
 
-// Close dropdown when clicking outside
-document.addEventListener('click', function(event) {
-  const dropdowns = document.querySelectorAll('.bundle-dropdown');
-  dropdowns.forEach(function(dropdown) {
-    if (!dropdown.contains(event.target)) {
-      dropdown.classList.remove('active');
-    }
-  });
-});
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function (event) {
+      const dropdowns = document.querySelectorAll('.bundle-dropdown');
+      dropdowns.forEach(function (dropdown) {
+        if (!dropdown.contains(event.target)) {
+          dropdown.classList.remove('active');
+        }
+      });
+    });
   </script>
 </body>
+
 </html>
