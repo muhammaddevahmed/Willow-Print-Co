@@ -290,22 +290,7 @@
   <!-- FOOTER END -->
 
   <script src="script.js"></script>
-  <script>
-    // Bundle Dropdown Toggle
-    document.querySelector('.bundle-dropbtn').addEventListener('click', function () {
-      this.parentElement.classList.toggle('active');
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function (event) {
-      const dropdowns = document.querySelectorAll('.bundle-dropdown');
-      dropdowns.forEach(function (dropdown) {
-        if (!dropdown.contains(event.target)) {
-          dropdown.classList.remove('active');
-        }
-      });
-    });
-  </script>
+ 
 </body>
 
 </html>
